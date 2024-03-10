@@ -4,7 +4,6 @@ function loadConfig() {
   if (process.env.ADYEN_INTEGRATION_CONFIG) {
     return loadFromAdyenIntegrationEnvVar()
   }
-
   return loadFromExternalFile()
 }
 
