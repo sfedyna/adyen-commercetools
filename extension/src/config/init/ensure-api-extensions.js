@@ -10,6 +10,8 @@ async function ensureApiExtensions(
   ctpAdyenIntegrationBaseUrl,
   ctpAuthHeaderValue,
 ) {
+
+
   const apiExtensionTemplate = await utils.readAndParseJsonFile(
     'resources/api-extension.json',
   )
@@ -30,6 +32,8 @@ async function ensureApiExtensions(
           `    }`,
       )
     }
+
+
     const existingExtension = await fetchExtensionByKey(
       ctpClient,
       apiExtensionTemplate.key,
